@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fibonacci</title>
+  </head>
+  <body>
+    <script>
+      function Fibonacci(n) {}
+
+      function FibonacciRecursion(number) {
+        if (number == 1) {
+          return number;
+        } else if (number == 0) {
+          return number;
+        } else {
+          return (
+            FibonacciRecursion(number - 1) + FibonacciRecursion(number - 2)
+          );
+        }
+      }
+    </script>
+  </body>
+</html>
