@@ -7,7 +7,8 @@
   </head>
   <body>
     <script>
-      function fibonacci(number) {
+      //   Non-recursive solution of Fibonacci
+      function Fibonacci(number) {
         let n1 = 1,
           n2 = 1,
           result;
@@ -22,6 +23,7 @@
         }
       }
 
+      //   Recursive solution of Fibonacci
       function FibonacciRecursion(number) {
         if (number == 1) {
           return number;
