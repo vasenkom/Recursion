@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Merge sort</title>
+  </head>
+  <body>
+    <script>
+      // Helper Function
+      function merge(left, right) {
+        let array = [];
+        let leftIndex = 0;
+        let rightIndex = 0;
+
+        while (leftIndex < left.length && rightIndex < right.length) {
+          if (left[leftIndex] < right[rightIndex]) {
+            array.push(left[leftIndex]);
+            leftIndex++;
+          } else {
+            array.push(right[rightIndex]);
+            rightIndex++;
+          }
+        }
+
+        return array
+          .concat(left.slice(leftIndex))
+          .concat(right.slice(rightIndex));
+      }
+
+      // Recursive solution
+      function MergeSortRecursive(array) {
+        let middle = Math.floor(array.length / 2);
+
+        if (array.length <= 1) {
+          return array;
+        } else {
+          let left = MergeSortRecursive(array.slice(0, middle));
+          let right = MergeSortRecursive(array.slice(middle));
+
+          return merge(left, right);
+        }
+      }
+    </script>
+  </body>
+</html>
